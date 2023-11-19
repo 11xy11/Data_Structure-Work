@@ -33,15 +33,15 @@ class currency
 		currency add(const currency&) const;
 		currency& increment(const currency&);
 		void output() const;
-		//£¨1£© 
+		//ï¼ˆ1ï¼‰ 
 		void input();
-		//£¨2£©
+		//ï¼ˆ2ï¼‰
 		currency subtract(const currency&)const; 
-		//£¨3£©
+		//ï¼ˆ3ï¼‰
 		currency percent(double); 
-		//£¨4£©
+		//ï¼ˆ4ï¼‰
 		currency multiply(double);
-		//£¨5£©
+		//ï¼ˆ5ï¼‰
 		currency divide(double); 
 	private:
 		signType sign;
@@ -103,23 +103,24 @@ void currency::output() const
 	cout<<"$"<<dollars<<".";
 	if(cents<10) cout<<"0";
 	cout<<cents;
+	cout<<endl;
 } 
 
 void currency::input()//(1)
 {
-	cout<<"ÇëÊäÈë·ûºÅ²¿·Ö ";
+	cout<<"è¯·è¾“å…¥ç¬¦å·éƒ¨åˆ† ";
 	char ch;
 	cin>>ch;
 	if(ch=='-') sign=MINUS;
 	else sign=PLUS;
 	
-	cout<<"ÇëÊäÈëÃÀÔª²¿·Ö";
+	cout<<"è¯·è¾“å…¥ç¾Žå…ƒéƒ¨åˆ†";
 	unsigned long thedollars;
 	cin>>thedollars;
 	if(thedollars<0) throw illegalParameterValue("Wrong dollars");
 	dollars=thedollars;
 	 
-	cout<<"ÇëÊäÈëÃÀ·Ö²¿·Ö"; 
+	cout<<"è¯·è¾“å…¥ç¾Žåˆ†éƒ¨åˆ†"; 
 	unsigned int thecents;
 	cin>>thecents;
 	if(thecents>99) throw illegalParameterValue("Wrong cents");
