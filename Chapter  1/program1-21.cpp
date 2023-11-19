@@ -1,7 +1,7 @@
 currency currency::add(const currency& x) const
 {
 	currency y;
-	y=amount+x.amount;
+	y.amount=amount+x.amount;
 	return y;
  } 
 void currency::output() const
