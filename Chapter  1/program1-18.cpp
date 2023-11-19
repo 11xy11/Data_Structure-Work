@@ -16,8 +16,8 @@ int main()
 	cout<<"=";
 	j.output();
 	
-	j=i.add(g).add(h);//j=g+h
-	j=i.increment(g).add(h);//j=g+hÇÒi=i+g
+	j=i.add(g).add(h);//j=i+g+h
+	j=i.increment(g).add(h);//j=i+g+h&&i=i+g
 	 
 	cout<<"Attemping to initialize with cents=152"<<endl;
 	try{
