@@ -15,6 +15,7 @@ int main()
 	g.output();
 	cout<<"=";
 	j.output();
+	cout<<endl;
 	
 	j=i.add(g).add(h);//j=i+g+h
 	j=i.increment(g).add(h);//j=i+g+h&&i=i+g
