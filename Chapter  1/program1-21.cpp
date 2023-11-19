@@ -6,15 +6,15 @@ currency currency::add(const currency& x) const
  } 
 void currency::output() const
 {
-	theamount=amount;
+	long theamount=amount;
 	if(theamount<0)
 	{
 		cout<<"-";
 		theamount=-theamount;
 	}
-	thedollars=theamount/100;
+	int thedollars=theamount/100;
 	cout<<"$"<<thedollars<<".";
-	thecents=theamount-100*thedollars;
+	int thecents=theamount-100*thedollars;
 	if(thecents<10) cout<<"0";
 	cout<<thecents;
 }
