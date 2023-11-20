@@ -4,7 +4,7 @@ using namespace std;
 template<class T>
 int accumulate(T* a,T* b,int init)
 {
-	for(int i=0;a[i]!=b[0];i++)
+	for(int i=0;i<b-a;i++)
 	init += a[i];
 	return init;
 }
